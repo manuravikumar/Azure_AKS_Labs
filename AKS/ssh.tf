@@ -1,4 +1,3 @@
-# Declare the random_pet resource to generate a random name for the SSH key
 resource "random_pet" "ssh_key_name" {
   prefix    = "ssh"
   separator = ""
@@ -19,9 +18,4 @@ resource "azapi_resource_action" "ssh_public_key_gen" {
   action      = "generateKeyPair"
   method      = "POST"
   response_export_values = ["publicKey", "privateKey"]
-}
-
-# Output the public key
-output "key_data" {
-  value = jsondecode(azapi_resource_action.ssh_public_key_gen.output).publicKey
 }
