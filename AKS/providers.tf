@@ -19,13 +19,7 @@ terraform {
       version = "0.9.1"
     }
   }
-  backend "remote" {
-    hostname = "app.terraform.io"
-    organization = "manuravikumar"
-    workspaces {
-      name = "aks-lab"
-    }
-  }
+  
 }
 
 provider "azurerm" {
