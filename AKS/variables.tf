@@ -46,3 +46,22 @@ variable "AZURE_SUBSCRIPTION_ID" {
   description = "The Azure Subscription ID"
   type        = string
 }
+variable "ARM_CLIENT_ID" {
+  description = "The Azure Client ID for the Service Principal"
+  type        = string
+}
+
+variable "ARM_CLIENT_SECRET" {
+  description = "The Azure Client Secret for the Service Principal"
+  type        = string
+}
+
+variable "ARM_TENANT_ID" {
+  description = "The Azure Tenant ID"
+  type        = string
+}
+
+variable "ARM_SUBSCRIPTION_ID" {
+  description = "The Azure Subscription ID"
+  type        = string
+}
