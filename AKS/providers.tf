@@ -23,6 +23,9 @@ terraform {
 provider "azurerm" {
   features {}
 }
-provider "azapi" {
-  
+
+  provider "azapi" {
+  client_id       = var.AZURE_CLIENT_ID
+  tenant_id       = var.AZURE_TENANT_ID
+  subscription_id = var.AZURE_SUBSCRIPTION_ID
 }
